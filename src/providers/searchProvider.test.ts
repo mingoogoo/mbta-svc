@@ -29,6 +29,5 @@ describe('Mbta Search Provider', () => {
             lon: -71.060225,
         }]
         expect(results).toEqual(expectedResults);
-
     });
 });

@@ -8,11 +8,21 @@
 # Scope
 - MBTA-Api service itself
 - Not breaking any down-stream api usage dependencies
+- monitoring of external dependencies
 
 # Testing
 - Testing Pyramid based strategy (automated)
 - gating merge PR to main:
   - foundation of extensive unit tests at the base of the pyramid (no env/deployment burden).
+    - unit test coverage of 80% or higher.
+    - branch coverage of 80% or higher.
+      - including error cases
+    - above 100% coverage for key logic areas.
+    - for list mechanics, test for:
+      - one
+      - none
+      - a few
+      - many
   - functional (larger unit tests) to test internal service paths thru code (still no env/deployment)
   - contract testing to ensure upstream api consumer expectations are still met.
   - connectivity sanity check (env deployment)
@@ -20,6 +30,15 @@
   - run e2e test suite (ui) which includes very small set of happy-path tests tagged as calling this service.
 - hourly tests
   - api tests against external mbta api
+- load testing
+  - setup dedicated load testing suite
+  - run nightly and on-demand
+  - non-gating
+
+# Manual Testing
+- exploratory testing only
+  - focused on new/changed feature functionality
+- bugs are triaged into targeted unit/contract test addtions/changes, etc. that show bug is fixed and serve as regression test assurance.
 
 # Observability
 - service health checks
