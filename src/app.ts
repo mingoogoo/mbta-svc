@@ -1,5 +1,5 @@
 import express from 'express';
-import itemRoutes from './routes/mbta-routes';
+import mbtaRoutes from './routes/mbta-routes';
 import { errorHandler } from './middlewares/errorHandler';
 
 const app = express();
@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 // Routes
-app.use('/api/items', itemRoutes);
+app.use('/api', mbtaRoutes);
 
 // Global error handler (should be after routes)
 app.use(errorHandler);

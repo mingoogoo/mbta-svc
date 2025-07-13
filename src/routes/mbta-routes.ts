@@ -1,18 +1,12 @@
-import { Router } from 'express';
+import { Router, Request, Response, NextFunction } from 'express';
 import {
-  createItem,
-  getItems,
-  getItemById,
-  updateItem,
-  deleteItem,
+  searchStops,
+  getLineById,
 } from '../controllers/mbtaController';
 
 const router = Router();
 
-router.get('/', getItems);
-router.get('/:id', getItemById);
-router.post('/', createItem);
-router.put('/:id', updateItem);
-router.delete('/:id', deleteItem);
+router.get('/stops/search', searchStops);
+router.get('/line/:id', getLineById);
 
 export default router;
