@@ -20,7 +20,8 @@ Core logic to create mock data and walkable graph of stops adapted from a previo
 ## Running Unit Tests
 - from local repo root:
   - `npm run test`
-  - `nmp run test --coverage`
+     
+     this will run all unit tests and generate test coverage report.
 
 ## API Usage
 - GET /api/stops/search?name=searchtext
@@ -53,11 +54,13 @@ Core logic to create mock data and walkable graph of stops adapted from a previo
 - minimal api path structure to allow for future api expansion with reasonable organization.
 - api versioning expected to be supported if needed, likely through path token.
   - i.e. /api-v2/blah-blah
+- prioritized demonstrating Seperation-of-Concerns design pattern, and SOLID to show unit-testable code patterns.
 
 ## Testing Strategy
 - see [Quality Strategy](./QUALITY_STRATEGY.md) doc
 
 ## Next Steps
+- only use mock mbta data-client for unit tests, and implement real mbta data-client.
 - expand api to include more lookup abilities, like api/stop/[id]
 - explore Typescript-bound open-api auto-gen to tie into swagger docs gen.
   - i.e. https://github.com/epiphone/routing-controllers-openapi

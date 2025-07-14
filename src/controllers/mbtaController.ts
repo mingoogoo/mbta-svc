@@ -12,7 +12,6 @@ export const searchStops = async (req: Request, res: Response, next: NextFunctio
     const results = searchProvider.findStopAndConnections(nameSearch);
     res.json(results);
   } catch (error) {
-    console.log('------------------', error);
     next(error);
   }
 };
