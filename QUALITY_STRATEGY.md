@@ -29,7 +29,7 @@
 - on-demand/optional
   - run e2e test suite (ui) which includes very small set of happy-path tests tagged as calling this service.
 - hourly tests
-  - api tests against external mbta api
+  - api tests against external mbta api (signal compatibility break)
 - load testing
   - setup dedicated load testing suite
   - run nightly and on-demand
@@ -53,7 +53,7 @@
 - artifact-based release for easier roll-back, foresnsics, etc.
 
 # Stakeholders
-- **Product**: feature acceptance criteria, prioritization
+- **Product**: quality/testability part of feature acceptance criteria, prioritization
 - **API Consumers**: coordinate breaking api changes
 - **Operations**: align with robust monitoring practices
 - **Team Developers**: ergonomics/tooling

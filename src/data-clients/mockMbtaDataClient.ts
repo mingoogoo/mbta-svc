@@ -46,7 +46,7 @@ export const makeMockMbtaDataClient = (mockArgs?: MockMbtaDataClientArgs): MbtaD
             })
         },
 
-    getSubwayStops: (routeId: string): Promise<SubwayStopsResult> => {
+        getSubwayStops: (routeId: string): Promise<SubwayStopsResult> => {
             return new Promise((resolve) => {
                 setTimeout(() => {
                     let stops = stopsData.get(routeId);

@@ -55,6 +55,11 @@ Core logic to create mock data and walkable graph of stops adapted from a previo
 - api versioning expected to be supported if needed, likely through path token.
   - i.e. /api-v2/blah-blah
 - prioritized demonstrating Seperation-of-Concerns design pattern, and SOLID to show unit-testable code patterns.
+  - api stack:
+    - router
+    - controllers
+    - providers
+    - data-clients
 
 ## Testing Strategy
 - see [Quality Strategy](./QUALITY_STRATEGY.md) doc
